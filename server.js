@@ -11,8 +11,6 @@ var mongoose = require("mongoose");
 var exphbs = require("express-handlebars"); 
 var Article = require("./models/Article.js");  
 
-
-
 var app = express(); 
 
 app.use(bodyParser.urlencoded({
@@ -35,7 +33,7 @@ db.on("error", function(error) {
 }); 
 
 db.once("open", function() {
-    conssole.log("mongoose connection successful"); 
+    console.log("mongoose connection successful"); 
 }); 
 
 app.engine("handlebars", exphbs({ defaultLayout: "main"})); 
