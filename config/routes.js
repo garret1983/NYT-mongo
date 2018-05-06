@@ -13,7 +13,7 @@ module.exports = function (router) {
             } else if (found.length === 0) {
                 res.render("empty")
             } else {
-                var hgbObject = {
+                var hbsObject = {
                     articles: found
                 };
                 res.render("index", hbsOject);

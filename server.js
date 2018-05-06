@@ -10,7 +10,7 @@ var bodyParser = require("body-parser");
 var mongoose = require("mongoose"); 
 var exphbs = require("express-handlebars"); 
 var Article = require("./models/Article.js");  
-var Note = require("./models/note.js"); 
+var Note = require("./models/Note.js"); 
 
 var app = express(); 
 
