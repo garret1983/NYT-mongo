@@ -16,7 +16,7 @@ module.exports = function (router) {
                 var hbsObject = {
                     articles: found
                 };
-                res.render("index", hbsOject);
+                res.render("index", hbsObject);
             }
         });
     });
@@ -38,10 +38,10 @@ module.exports = function (router) {
     router.get("/saved ", function (req, res) {
 
         articles.articlesController.get({ saved: true }, function (data) {
-            var hbsOject = {
+            var hbsObject = {
                 articles: data
             };
-            res.render("saved", hbsOject);
+            res.render("saved", hbsObject);
         });
     });
 
