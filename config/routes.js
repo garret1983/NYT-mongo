@@ -35,9 +35,9 @@ module.exports = function (router) {
         });
     });
 
-    router.get("/saved ", function (req, res) {
+    router.get("/saved", function (req, res) {
 
-        articles.articlesController.get({ saved: true }, function (data) {
+        articlesController.get({ saved: true }, function (data) {
             var hbsObject = {
                 articles: data
             };
