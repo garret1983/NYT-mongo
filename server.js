@@ -1,7 +1,7 @@
-// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
-// // Set mongoose to leverage built in JavaScript ES6 Promises
-// // Connect to the Mongo DB
+// Set mongoose to leverage built in JavaScript ES6 Promises
+// Connect to the Mongo DB
 // mongoose.Promise = Promise;
 // mongoose.connect(MONGODB_URI);
 
@@ -11,6 +11,8 @@ var mongoose = require("mongoose");
 var exphbs = require("express-handlebars"); 
 var Article = require("./models/Article.js");  
 var Note = require("./models/Note.js"); 
+var cheerio = require("cheerio"); 
+var request = require("request"); 
 
 var app = express(); 
 
